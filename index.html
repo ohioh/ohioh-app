@@ -49,6 +49,8 @@
   return "";
 }
         function checkCookie() {
+            const myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'application/json');
              fetch('https://ohioh.app:8442/api/users', {
         method: 'GET',
         headers: myHeaders,
