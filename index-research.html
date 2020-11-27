@@ -598,12 +598,13 @@
         personalenable = 0;
       function enablegps() {
         var checkBox = document.getElementById("GPS");
-
+  console.log("GPS..."+gpsenable);
         if (checkBox.checked == true) {
           gpsenable = 0;
         } else {
           gpsenable = 1;
         }
+        console.log(gpsenable);
       }
 
       function enableintrval() {
