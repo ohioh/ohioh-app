@@ -437,7 +437,7 @@
                     </form>
                   </div>
                   <div class="col-6">
-                    <button type="button" class="btn btn-outline-danger">
+                    <button onclick="clearlog()" type="button" class="btn btn-outline-danger">
                       Löschen
                     </button>
                   </div>
@@ -596,6 +596,10 @@
       var gpsenable = 0,
         intervalenable = 0,
         personalenable = 0;
+       function clrealog() {
+        ChromeSamples.clearLog();
+      }
+      
       function enablegps() {
         var checkBox = document.getElementById("GPS");
   console.log("GPS..."+gpsenable);
