@@ -1,0 +1,68 @@
+<!--
+Copyright 2018 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set character encoding -->
+    <meta charset="utf-8">
+    <!-- Set the viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- Set title -->
+    <title>Offline Page</title>
+    <!-- Request styles -->
+    <style>
+      body {
+        font-family:  arial;
+        margin: 2em;
+      }
+
+      h1 {
+        font-style: arial;
+        color: #92d050;
+      }
+
+      p {
+        margin-block: 1rem;
+      }
+
+      button {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Offline page</h1>
+    </header>
+    <main>
+      <img src="../images/OHIOHicons/Icon-384.png" />
+      <p>The resource you requested has not been cached! It is not viewable offline!</p>
+      <p>Click the button below to try reloading.</p>
+      <button type="button">⤾ Reload</button>
+          <!-- inline the webpage's javascript file -->
+      <script>
+        document.querySelector("button").addEventListener("click", () => {
+          window.location.reload();
+        });
+      </script>
+    </main>
+    <footer>
+      <p>You can try to connect to internet and use the link  to the Mainpage:</p>
+      <a href="../index.html">Home</a>
+    </footer>
+  </body>
+</html>
