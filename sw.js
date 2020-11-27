@@ -4,18 +4,26 @@ const RUNTIMECACHE = 'OHIOHCache-runtime';
 const OFFLINE_URL = "../pages/offline.html";
 
 const PRECACHE_URLS = [
+  '/assets/*',
+  '/bootstrap/js/jquery-3.5.1.min.js',
+  '/bootstrap/js/popper.min.js',
+  '/bootstrap/js/bootstrap.min.js',
+  '/bootstrap/js/bootstrap4-toggle.min.js',
   '/style/main.css',
   '/style/style.css',
   '/js/bootstrap.min.js',
   '/js/custom.js',
   '/js/pwa.js',
   '/js/jquery.js',
+  '/js/charts.js',
+  '/pages/offline.html',
   '/index.html',
   '/index.sass',
   '/index.js',
   '/_manifest.json',
   '/config.json',
   '/contact.html',
+  '/favicon.png',
   '/faq.html',
   '/file-upload.html',
   '/geo-location.html',
@@ -34,6 +42,7 @@ const PRECACHE_URLS = [
   '/os-detection.html',
   '/qr-generator.html',
   '/register.html',
+  '/sw.js',
   '/sharing.html',
   '/statistics.html',
   '/survey.html',
@@ -49,7 +58,9 @@ self.addEventListener('install', (event) => {
     const cache = await caches.open(PRECACHE_URLS);
     // Setting {cache: 'reload'} in the new request will ensure that the response
     // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
-    await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
+    await cache.addAll(PRECACHE_URLS);
+    console.log("[OHIOH] Serviceworker added precache content.");
+    event.waitUntil(self.skipWaiting());
   })());
 });
 
@@ -69,7 +80,7 @@ self.addEventListener('activate', (event) => {
         }));
       }).then(() => self.clients.claim())
     }
-    console.log("[OHIOH] Serviceworker acitvated.");
+    console.log("[OHIOH][Serviceworker] Self activated.");
   }))
 })
 
