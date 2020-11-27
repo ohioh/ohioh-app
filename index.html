@@ -33,6 +33,25 @@
 <body class="theme-light" data-highlight="OHIOH" onload="checkCookie()">
     <script>
         var usernumber, contactnumber;
+        
+         const myHeaders = new Headers();
+    myHeaders.append('Content-Type', 'application/json');
+             fetch('https://ohioh.app:8442/api/users', {
+        method: 'GET',
+        headers: myHeaders,
+        mode: 'cors',
+        cache: 'default',
+       
+    })
+    .then(data => data.json())
+    .then(data =>  { console.log(data)
+                  // window.location.href = "https://gui--festive-ardinghelli-674e56.netlify.app/index.html";
+                 //   alert("Congrats you are successfully logged in");
+                   }) 
+    .catch((err) => {
+        console.error(err);
+    });
+        
         function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
