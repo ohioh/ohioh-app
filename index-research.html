@@ -30,10 +30,9 @@
   </div>
 
   <div id="page">
-
-    <header>
+    <!-- <header> -->
       <!-- header and footer bar go here-->
-      <div class="header header-fixed header-auto-show header-logo-app">
+      <!-- <div class="header header-fixed header-auto-show header-logo-app">
         <a href="index.html" class="header-title">OHIOH-Research-APP</a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-dark"><i
@@ -42,7 +41,7 @@
             class="fas fa-moon"></i></a>
         <a href="#" data-menu="menu-highlights" class="header-icon header-icon-3"><i class="fas fa-brush"></i></a>
       </div>
-    </header>
+    </header> -->
 
     <footer>
       <div id="footer-bar" class="footer-bar-5">
@@ -54,7 +53,6 @@
             data-feather-color="ohioh" data-feather-bg="blue2-fade-light"></i><span>Dashboard</span></a>
         <a href="index-QR.html"><i data-feather="camera" data-feather-line="1" data-feather-size="21"
             data-feather-color="ohioh" data-feather-bg="brown1-fade-light"></i><span>QR-Infos</span></a>
-
       </div>
     </footer>
 
@@ -66,13 +64,7 @@
             <a href="#" data-menu="menu-main" class="bg-fade-gray1-dark shadow-xl preload-img"
               data-src="/icons/Icon-48.png"></a>
           </div>
-
-          <div class="card header-card shape-rounded" data-card-height="210">
-            <div class="card-overlay bg-highlight opacity-95"></div>
-            <div class="card-overlay dark-mode-tint"></div>
-            <div class="card-bg preload-img" data-src="/icons/Icon-48.png"></div>
-          </div>
-
+        </header>
 
           <!-- Homepage Slider-->
           <div class="single-slider-boxed text-center owl-no-dots owl-carousel">
@@ -301,6 +293,7 @@
       </div>
     </section>
   </div>
+
   <script>
     function getCookie(cname) {
       var name = cname + "=";
@@ -317,6 +310,7 @@
       }
       return "";
     }
+
     // Add a global error event listener early on in the page load, to help ensure that browsers
     // which don't support specific functionality still end up displaying a meaningful message.
     window.addEventListener('error', function (error) {
@@ -327,11 +321,7 @@
       }
     });
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-
-    window.addEventListener('DOMContentLoaded', function () {
+     window.addEventListener('DOMContentLoaded', function () {
       const searchParams = new URL(location).searchParams;
       const inputs = Array.from(document.querySelectorAll('input[id]'));
 
@@ -480,10 +470,6 @@
               devices.push(event.uuids);
               if (1) {
 
-
-
-
-
                 VALUE = JSON.stringify({
 
                   "email": getCookie('email'),
@@ -533,7 +519,6 @@
               }
             }
           }
-
         });
 
         setTimeout(stopScan, 10000);
@@ -551,7 +536,6 @@
     }
 
     /* Utils */
-
     const logDataView = (labelOfDataSource, key, valueDataView) => {
       const hexString = [...new Uint8Array(valueDataView.buffer)].map(b => {
         return b.toString(16).padStart(2, '0');
