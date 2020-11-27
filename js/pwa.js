@@ -9,12 +9,12 @@ if ('serviceWorker' in navigator) {
             //navigator.serviceWorker.register('/swbluetooth.js');
             console.log("[OHIOH] Tracing-Sensor-Worker is  registered");
             });
-        }).catch(functions (error) {
+        }).catch(function (error) {
             console.log("[OHIOH] ServiceWorker Error (${error})");
-        }) else {
+        })
+    } else {
             console.warn("[OHIOH] ServiceWorker not avaible");
         };
-}
 
 // if ('serviceWorker' in navigator) {
 // 	navigator.serviceWorker.register('./sw.js')
