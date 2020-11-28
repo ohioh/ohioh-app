@@ -39,6 +39,8 @@
         fetch('https://ohioh.app:8442/api/users')
 .then((resp) => resp.json()) // Transform the data into json
 .then(function(data) {
+            var count = Object.keys(data).length;
+  console.log(count);
   console.log(data);
   });
 
