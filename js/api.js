@@ -16,7 +16,7 @@
 .then((resp) => resp.json()) // Transform the data into json
 .then(function(data) {
             var count = Object.keys(data).length;
-  console.log(count);
+  console.log("number of users"+count);
   console.log(data);
             document.getElementById("download").innerHTML =count;
                document.getElementById("donate").innerHTML =count;
