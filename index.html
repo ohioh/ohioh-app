@@ -682,10 +682,7 @@
           navigator.geolocation.getCurrentPosition(success, error);
         }
           }
-        var scan = document.getElementById("Dauer");
-        var scantime = scan.value;
-        var inter = document.getElementById("Interval");
-        var intervaltime = inter.value;
+        
         function success(position) {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
