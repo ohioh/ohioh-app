@@ -18,6 +18,8 @@ const PRECACHE_URLS = [
   '/js/pwa.js',
   '/js/jquery.js',
   '/js/charts.js',
+  '/js/ble.js',
+  'js/api.js',
   '/pages/offline.html',
   '/style/main.css',
   '/style/style.css',
