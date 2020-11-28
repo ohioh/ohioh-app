@@ -324,8 +324,7 @@
                                 Datenspende
                             </div>
                             <div class="col-4">
-                                <input type="checkbox" checked data-toggle="toggle" data-on="deaktiviert"
-                                    data-off="aktiv" data-onstyle="danger" data-offstyle="success">
+                                <input type="checkbox" onclick="enablepersonal()" id="personalData" />
                             </div>
                             <div class="col-4">
                                 <button class="btn btn-primary" type="button" data-toggle="collapse"
@@ -388,7 +387,7 @@
                                 privacy-first
                             </div>
                             <div class="col-4">
-                                     <input type="checkbox" onclick="enablepersonal()" id="personalData" />
+                                     <input type="checkbox" onclick="enableprivate()" id="private" />
                             </div>
                             <div class="col-4">
                                 <button class="btn btn-primary" type="button" data-toggle="collapse"
@@ -646,7 +645,9 @@
    
       var gpsenable = 0,
         
-        personalenable = 0;
+        personalenable = 0,
+        privateenable = 0;
+
        function clearlog() {
         ChromeSamples.clearLog();
       }
@@ -666,6 +667,15 @@
 
       function enablepersonal() {
         var checkBox = document.getElementById("personalData");
+
+        if (checkBox.checked == true) {
+          personalenable = 1;
+        } else {
+          personalenable = 0;
+        }
+      }
+      function enableprivate() {
+        var checkBox = document.getElementById("private");
 
         if (checkBox.checked == true) {
           personalenable = 1;
@@ -718,7 +728,7 @@
           navigator.bluetooth.addEventListener(
             "advertisementreceived",
             (event) => {
-              if (event.device.name != null && flag == 1) {
+              if (event.device.name != null ) {
                 // log('Advertisement received.');
                 function checkAdult(device) {
                   //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
