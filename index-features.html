@@ -2,20 +2,31 @@
 <html lang="de">
 
 <head>
+    <title>OHIOH-App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-    <title>OHIOH-APP Features</title>
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
-    <link rel="manifest" href="_manifest.json" data-pwa-version="1.0.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/OHIOHicons/apple-icon-180x180.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="OHIOH-Research">
+    <meta name="theme-color" content="#92d050">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileImage" content="/assets/icon/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#92d050">
+    <link rel="manifest" href="/_manifest.json" data-pwa-version="1.0.1">
+    <link rel="stylesheet" type="text/css" href="/style/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/css/fontawesome-all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body class="theme-light" data-highlight="OHIOH">
@@ -23,7 +34,7 @@
     <div id="preloader">
         <div class="spinner-border color-highlight" role="status"></div>
     </div>
-    
+
     <div id="page">
         <header>
             <div class="page-title page-title-large">
@@ -35,209 +46,217 @@
 
 
         <!-- header and footer bar go here-->
-        <div class="header header-fixed header-auto-show header-logo-app">
-            <a href="index.html" class="header-title">OHIOH-Research-APP</a>
-            <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
-            <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-dark"><i
-                    class="fas fa-sun"></i></a>
-            <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-light"><i
-                    class="fas fa-moon"></i></a>
-            <a href="#" data-menu="menu-highlights" class="header-icon header-icon-3"><i class="fas fa-brush"></i></a>
-        </div>
-        <div id="footer-bar" class="footer-bar-5">
-            <a href="index-features.html"><i data-feather="heart" data-feather-line="1" data-feather-size="21"
-                    data-feather-color="ohioh" data-feather-bg="red2-fade-light"></i><span>Features</span></a>
-            <a href="index-research.html"><i data-feather="bluetooth" data-feather-line="1" data-feather-size="21"
-                    data-feather-color="ohioh" data-feather-bg="green1-fade-light"></i><span>Research</span></a>
-            <a href="index.html" class="active-nav"><i data-feather="home" data-feather-line="1" data-feather-size="21"
-                    data-feather-color="ohioh" data-feather-bg="blue2-fade-light"></i><span>Dashboard</span></a>
-            <a href="index-QR.html"><i data-feather="camera" data-feather-line="1" data-feather-size="21"
-                    data-feather-color="ohioh" data-feather-bg="brown1-fade-light"></i><span>QR</span></a>
-
-        </div>
-
-        <div class="page-content">
-
-            <div class="card header-card shape-rounded" data-card-height="210">
-                <div class="card-overlay bg-highlight opacity-95"></div>
-                <div class="card-overlay dark-mode-tint"></div>
-                <div class="card-bg preload-img" data-src="images/pictures/11.png"></div>
+        <footer>
+            <div id="footer-bar" class="footer-bar-5">
+                <a href="index-features.html"><i data-feather="heart" data-feather-line="1" data-feather-size="21"
+                        data-feather-color="ohioh" data-feather-bg="red2-fade-light"></i><span>Features</span></a>
+                <a href="index-research.html"><i data-feather="bluetooth" data-feather-line="1" data-feather-size="21"
+                        data-feather-color="ohioh" data-feather-bg="green1-fade-light"></i><span>Research</span></a>
+                <a href="index.html" class="active-nav"><i data-feather="home" data-feather-line="1"
+                        data-feather-size="21" data-feather-color="ohioh"
+                        data-feather-bg="blue2-fade-light"></i><span>Dashboard</span></a>
+                <a href="index-QR.html"><i data-feather="camera" data-feather-line="1" data-feather-size="21"
+                        data-feather-color="ohioh" data-feather-bg="brown1-fade-light"></i><span>QR</span></a>
             </div>
+        </footer>
 
-            <div class="card card-style">
-                <div class="content">
-                    Wir habe die App entworfen um Fragen aus der Bevölkerung zu beantworten. Das OHIOH-Team ist
-                    weiterhin an euren Wünschen und Ideen interssiert
-                    und wird deine Anfragen gewissenhaft umsetzen.
+
+        <!-- Main Page Content Area-->
+        <section>
+            <div class="page-content">
+                <header>
+                    <div class="card header-card shape-rounded" data-card-height="210">
+                        <div class="card-overlay bg-highlight opacity-95"></div>
+                        <div class="card-overlay dark-mode-tint"></div>
+                        <div class="card-bg preload-img" data-src="images/pictures/11.png"></div>
+                    </div>
+                </header>
+                <div class="card card-style">
+                    <div class="content">
+                        Wir habe die App entworfen um Fragen aus der Bevölkerung zu beantworten. Das OHIOH-Team ist
+                        weiterhin an euren Wünschen und Ideen interssiert
+                        und wird deine Anfragen gewissenhaft umsetzen.
+                    </div>
                 </div>
-            </div>
 
-            <div class="card card-style">
-                <div class="content mt-0 mb-0">
-                    <div class="list-group list-custom-large">
-                        <a href="component-ad-boxes.html">
-                            <i class="fa fa-dollar-sign font-20 color-green1-dark"></i>
-                            <span>Bewegter Inhalt</span>
-                            <strong>Apps ins Bewegung sind einfach interessanter !</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
+                <div class="card card-style">
+                    <div class="content mt-0 mb-0">
+                        <div class="list-group list-custom-large">
+                            <a href="component-ad-boxes.html">
+                                <i class="fa fa-dollar-sign font-20 color-green1-dark"></i>
+                                <span>Bewegter Inhalt</span>
+                                <strong>Apps ins Bewegung sind einfach interessanter !</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1"
-                            aria-expanded="false" aria-controls="collapse1">
-                            more<a href="https://www.fh-kiel.de/startseite/" target="_blank"></a>
-                        </button>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                more<a href="https://www.fh-kiel.de/startseite/" target="_blank"></a>
+                            </button>
 
-                        <div class="collapse" id="collapse1">
-                            <div class="card card-body">
-                                Erfahre mehr über die App und die Arbeit von OHIOH auf unserem Blog<br>
-                                <a class="h3" href="https://ohioh.de/blog/">OHIOH Homepage</a>
+                            <div class="collapse" id="collapse1">
+                                <div class="card card-body">
+                                    Erfahre mehr über die App und die Arbeit von OHIOH auf unserem Blog<br>
+                                    <a class="h3" href="https://ohioh.de/blog/">OHIOH Homepage</a>
+                                </div>
                             </div>
+
+                            <a href="component-ad-scroll-show.html">
+                                <i class="fa fa-pound-sign font-20 color-teal-dark"></i>
+                                <span>Updates ohne Mehraufwand</span>
+                                <strong>Die Welt der Technologie ist schnelllebig. Wir haben die App so entworfen, dass
+                                    wir
+                                    live updaten können.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="component-ad-timed.html">
+                                <i class="far fa-clock font-20 color-brown1-dark"></i>
+                                <span>Hast du ein Android- oder Apple-Smartphone?</span>
+                                <strong>Die App kannst du auf dem Computer zum testen oder deinem Smartpone
+                                    installieren.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="component-add-to-home.html">
+                                <i class="fa fa-mobile-alt font-20 color-gray2-dark"></i>
+                                <span>Wie eine App</span>
+                                <strong>Von der Homepage der App direkt auf deinen Bildschirm. </strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-accordions.html">
+                                <i class="fa fa-server font-16 color-blue2-dark"></i>
+                                <span>Sicherheit</span>
+                                <strong>Sicherheit ist das Hauptthema der App. Du hast die Einstellungen selbst in der
+                                    Hand.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-action-sheets.html">
+                                <i class="fa fa-bookmark font-16 color-red2-dark"></i>
+                                <span>German Standards</span>
+                                <strong>Fullfilling the security and privacy Laws</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-action-modals.html">
+                                <i class="fa fa-square font-16 color-green1-dark"></i>
+                                <span>Fragen und Kontakt zum Team</span>
+                                <strong>Wir arbeiten für dich. Daher freuen wir uns, wenn du direkt über die App Kontakt
+                                    aufnimmst.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-auto-dark.html">
+                                <i class="fa fa-lightbulb font-16 color-yellow1-dark"></i>
+                                <span>We are all colors</span>
+                                <strong>Konfiguriere die App farblich nach deinen Wünschen.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-buttons.html">
+                                <i class="fa fa-hand-pointer font-16 color-green2-dark"></i>
+                                <span>Klare Einstellungen und Meldungen</span>
+                                <strong>Uns ist eine klare Kommunikation und Information wichtig. Das Thema Covid-19
+                                    Warnmeldung darf kein Platz für Interpretationen haben.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-back-to-top.html">
+                                <i class="fa fa-arrow-up font-16 color-magenta2-dark"></i>
+                                <span>Informationen in der APP und Code</span>
+                                <strong>Die App ist so aufgebaut, dass du immer einfach eine Erklärung zu den Themen
+                                    oder
+                                    Einstellungen findest</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-charts.html">
+                                <i class="fa fa-chart-pie font-16 color-gray2-dark"></i>
+                                <span>Statistiken</span>
+                                <strong>Besonders interessant sind die Statistiken, die du durch deine App generierst.
+                                    Dafür
+                                    bietet die App das Statistik-Feature</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-chips.html">
+                                <i class="fa fa-sun font-16 color-yellow1-dark"></i>
+                                <span>Notification</span>
+                                <strong>less but important notifications </strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-cookie-box.html">
+                                <i class="fa fa-check font-16 color-green1-dark"></i>
+                                <span>Infection-Risk-Alert</span>
+                                <strong>Alerting in case of Covid-19 Risk</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-card-captions.html">
+                                <i class="fa fa-star font-16 color-magenta2-dark"></i>
+                                <span>GPS</span>
+                                <strong>GPS ist in Tracing-Apps mit Vorsicht zu nutzen. Wir haben uns entschieden euch
+                                    dieses Feature dennoch anzubieten. Du hast den Nutzen nicht nur von GPS selbst in
+                                    der
+                                    Hand</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-card-content.html">
+                                <i class="fa fa-square font-16 color-teal-dark"></i>
+                                <span>QR-Technology</span>
+                                <strong>Es gibt Situationen in denen Bluetooth und GPS nicht sinnvol sind. Da hilft der
+                                    QR-Code. In der App kannst du sowohl QR-Codes scannen oder eine Location mit einem
+                                    eigen
+                                    generierten QR-Code ausstatten. Einfach Daten eingeben und dir die PDF direkt aus
+                                    der
+                                    APP zuschicken um es auszudrucken.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                            <a href="component-card-gradient.html">
+                                <i class="far fa-square font-16 color-yellow1-dark"></i>
+                                <span>UBC-Feature</span>
+                                <strong>UBC steht für "User-Behavior-Catalog" und ist ein Teil unser
+                                    Infektionskettenforschung. Dieses Feature ermöglich für Forschungszwecke die
+                                    ermittelten
+                                    Daten spezifisch zu klassifizieren und auszuwerten.</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
                         </div>
-
-                        <a href="component-ad-scroll-show.html">
-                            <i class="fa fa-pound-sign font-20 color-teal-dark"></i>
-                            <span>Updates ohne Mehraufwand</span>
-                            <strong>Die Welt der Technologie ist schnelllebig. Wir haben die App so entworfen, dass wir
-                                live updaten können.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <a href="component-ad-timed.html">
-                            <i class="far fa-clock font-20 color-brown1-dark"></i>
-                            <span>Hast du ein Android- oder Apple-Smartphone?</span>
-                            <strong>Die App kannst du auf dem Computer zum testen oder deinem Smartpone
-                                installieren.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                        <a href="component-add-to-home.html">
-                            <i class="fa fa-mobile-alt font-20 color-gray2-dark"></i>
-                            <span>Wie eine App</span>
-                            <strong>Von der Homepage der App direkt auf deinen Bildschirm. </strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-accordions.html">
-                            <i class="fa fa-server font-16 color-blue2-dark"></i>
-                            <span>Sicherheit</span>
-                            <strong>Sicherheit ist das Hauptthema der App. Du hast die Einstellungen selbst in der
-                                Hand.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-action-sheets.html">
-                            <i class="fa fa-bookmark font-16 color-red2-dark"></i>
-                            <span>German Standards</span>
-                            <strong>Fullfilling the security and privacy Laws</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-action-modals.html">
-                            <i class="fa fa-square font-16 color-green1-dark"></i>
-                            <span>Fragen und Kontakt zum Team</span>
-                            <strong>Wir arbeiten für dich. Daher freuen wir uns, wenn du direkt über die App Kontakt
-                                aufnimmst.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-auto-dark.html">
-                            <i class="fa fa-lightbulb font-16 color-yellow1-dark"></i>
-                            <span>We are all colors</span>
-                            <strong>Konfiguriere die App farblich nach deinen Wünschen.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-buttons.html">
-                            <i class="fa fa-hand-pointer font-16 color-green2-dark"></i>
-                            <span>Klare Einstellungen und Meldungen</span>
-                            <strong>Uns ist eine klare Kommunikation und Information wichtig. Das Thema Covid-19
-                                Warnmeldung darf kein Platz für Interpretationen haben.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-back-to-top.html">
-                            <i class="fa fa-arrow-up font-16 color-magenta2-dark"></i>
-                            <span>Informationen in der APP und Code</span>
-                            <strong>Die App ist so aufgebaut, dass du immer einfach eine Erklärung zu den Themen oder
-                                Einstellungen findest</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-charts.html">
-                            <i class="fa fa-chart-pie font-16 color-gray2-dark"></i>
-                            <span>Statistiken</span>
-                            <strong>Besonders interessant sind die Statistiken, die du durch deine App generierst. Dafür
-                                bietet die App das Statistik-Feature</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-chips.html">
-                            <i class="fa fa-sun font-16 color-yellow1-dark"></i>
-                            <span>Notification</span>
-                            <strong>less but important notifications </strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-cookie-box.html">
-                            <i class="fa fa-check font-16 color-green1-dark"></i>
-                            <span>Infection-Risk-Alert</span>
-                            <strong>Alerting in case of Covid-19 Risk</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-card-captions.html">
-                            <i class="fa fa-star font-16 color-magenta2-dark"></i>
-                            <span>GPS</span>
-                            <strong>GPS ist in Tracing-Apps mit Vorsicht zu nutzen. Wir haben uns entschieden euch
-                                dieses Feature dennoch anzubieten. Du hast den Nutzen nicht nur von GPS selbst in der
-                                Hand</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-card-content.html">
-                            <i class="fa fa-square font-16 color-teal-dark"></i>
-                            <span>QR-Technology</span>
-                            <strong>Es gibt Situationen in denen Bluetooth und GPS nicht sinnvol sind. Da hilft der
-                                QR-Code. In der App kannst du sowohl QR-Codes scannen oder eine Location mit einem eigen
-                                generierten QR-Code ausstatten. Einfach Daten eingeben und dir die PDF direkt aus der
-                                APP zuschicken um es auszudrucken.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
-                        <a href="component-card-gradient.html">
-                            <i class="far fa-square font-16 color-yellow1-dark"></i>
-                            <span>UBC-Feature</span>
-                            <strong>UBC steht für "User-Behavior-Catalog" und ist ein Teil unser
-                                Infektionskettenforschung. Dieses Feature ermöglich für Forschungszwecke die ermittelten
-                                Daten spezifisch zu klassifizieren und auszuwerten.</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-
                     </div>
                 </div>
             </div>
-
-
-            <!-- footer and footer card-->
-            <div class="footer" data-menu-load="menu-footer.html"></div>
-        </div>
-        <!-- end of page content-->
-
-
-        <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-share.html"
-            data-menu-height="420" data-menu-effect="menu-over">
-        </div>
-
-        <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached rounded-m"
-            data-menu-load="menu-colors.html" data-menu-height="510" data-menu-effect="menu-over">
-        </div>
-
-        <div id="menu-main" class="menu menu-box-right menu-box-detached rounded-m" data-menu-width="260"
-            data-menu-load="menu-main.html" data-menu-active="nav-features" data-menu-effect="menu-over">
-        </div>
+            <!-- footer and footer card
+        <div class="footer" data-menu-load="menu-footer.html"></div> -->
+        </section>
     </div>
 
+    <!-- end of page content
+    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-share.html"
+        data-menu-height="420" data-menu-effect="menu-over">
+    </div>
+
+    <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-colors.html"
+        data-menu-height="510" data-menu-effect="menu-over">
+    </div>
+
+    <div id="menu-main" class="menu menu-box-right menu-box-detached rounded-m" data-menu-width="260"
+        data-menu-load="menu-main.html" data-menu-active="nav-features" data-menu-effect="menu-over">
+    </div> -->
+
+
+    <script rel="script" type="text/javascript" src="bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script rel="script" type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+    <script rel="script" type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script rel="script" type="text/javascript" src="bootstrap/js/bootstrap4-toggle.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
 </body>
 
