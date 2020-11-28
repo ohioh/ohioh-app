@@ -676,9 +676,9 @@
       async function onButtonClick() {
           if (gpsenable == 1) {
             if (!navigator.geolocation) {
-          log("Geolocation is not supported by your browser");
+                console.log("Geolocation is not supported by your browser");
         } else {
-          log("Locating…");
+            console.log("Locating…");
           navigator.geolocation.getCurrentPosition(success, error);
         }
           }
@@ -709,7 +709,7 @@
           //  log('Requesting Bluetooth Scan with options: ' + JSON.stringify(options));
           const scan = await navigator.bluetooth.requestLEScan(options);
 
-          log("Scan started ");
+          console.log("Scan started ");
           // log(' acceptAllAdvertisements: ' + scan.acceptAllAdvertisements);
           //  log(' active: ' + scan.active);
           // log(' keepRepeatedDevices: ' + scan.keepRepeatedDevices);
@@ -800,7 +800,7 @@
             //    log('Stopped.  scan.active = ' + scan.active);
           }
         } catch (error) {
-          log("Argh! " + error);
+            console.log("Argh! " + error);
         }
       }
 
@@ -814,7 +814,7 @@
           .join(" ");
         const textDecoder = new TextDecoder("ascii");
         const asciiString = textDecoder.decode(valueDataView.buffer);
-        log(
+        console.log(
           `  ${labelOfDataSource} Data: ` +
             key +
             "\n    (Hex) " +
