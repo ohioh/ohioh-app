@@ -31,46 +31,7 @@
 </head>
 
 <body class="theme-light" data-highlight="OHIOH" onload="checkCookie()">
-    <script>
-        var usernumber, contactnumber;
-        
-       
-        
-        fetch('https://ohioh.app:8442/api/users')
-.then((resp) => resp.json()) // Transform the data into json
-.then(function(data) {
-            var count = Object.keys(data).length;
-  console.log(count);
-  console.log(data);
-  });
 
-        
-        function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-        function checkCookie() {
-           
-  var user=getCookie("email");
-            console.log('cookie:  '+user)
-  if (user != "") {
-    alert("You are succesfully logged in " );
-  } else {
-     
-  }
-}
-        </script>
     <div id="preloader">
         <div class="spinner-border color-highlight" role="status"></div>
     </div>
@@ -310,13 +271,14 @@
 
                 <!-- App Schnelleinstellungen -->
                 <article>
-                    <div class="card card-style mt-4 shadow-l" data-card-height="380">
+                    <div class="card card-style mt-4 shadow-l" data-card-height="430">
 
                         <div class="content mb-2">
                             <h1><span class="badge badge-secondary">Schnelleinstellungen</span></h1>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="">Menü auswählen und Einstellung sofort ändern. Die App ist nach dem Downloaden offline. Privacy-by-default </p>
+                        <p class="">Menü auswählen und Einstellung sofort ändern. Die App ist nach dem Downloaden
+                            offline. Privacy-by-default </p>
 
                         <div class="row">
                             <div class="col-4">
@@ -630,7 +592,7 @@
     <script rel="script" src="js/custom.js" integrity="" crossorigin="anonymous"></script>
     <script rel="script" src="js/charts.js" integrity="" crossorigin="anonymous"></script>
     <script rel="script" src="index.js" integrity="" crossorigin="anonymous"></script> -->
-
+    <script rel="script" type="text/javascript" src="js/api.js"></script>
     <script rel="script" type="text/javascript" src="bootstrap/js/jquery-3.5.1.min.js"></script>
     <script rel="script" type="text/javascript" src="bootstrap/js/popper.min.js"></script>
     <script rel="script" type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
