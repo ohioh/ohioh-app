@@ -26,10 +26,6 @@ window.addEventListener("error", function (error) {
   }
 });
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-
 window.addEventListener("DOMContentLoaded", function () {
   const searchParams = new URL(location).searchParams;
   const inputs = Array.from(document.querySelectorAll("input[id]"));
