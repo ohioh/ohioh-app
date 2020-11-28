@@ -117,7 +117,7 @@
     const myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
 
-    fetch('http://195.201.35.222:3000/login', {
+    fetch('https://app.ohioh.de:8443/login', {
         method: 'POST',
         headers: myHeaders,
         mode: 'cors',
@@ -125,7 +125,11 @@
         body: VALUE
     })
     .then(data => data.json())
-    .then(data =>  { console.log(data) })
+    .then(data =>  { 
+        console.log(data) 
+                   setCookie(fd.get('email'));
+                   window.location.href = "https://ohioh-app.de/index.html";
+        })
     .catch((err) => {
         console.error(err);
     })
