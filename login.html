@@ -22,15 +22,15 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 
         <script>
-             function setCookie( cvalue) {
+              function setCookie( cvalue) {
   var d = new Date();
   d.setTime(d.getTime() + (1000 * 24 * 60 * 60 * 1000));
   var expires = "expires="+d.toUTCString();
   document.cookie = "email" + "=" + cvalue + ";" + expires + ";path=/";
 }
-            
-             function submitInfo(){
-    
+           var url = 'http://195.201.35.222:3000/login?email=Mbadhon@gmail.com&password=badhon'
+           function submitInfo(){
+
     let form = document.forms["myForm"];
     let fd = new FormData(form);
     let data = {};
@@ -51,10 +51,12 @@
         body: VALUE
     })
     .then(data => data.json())
-    .then(data =>  { console.log(data) 
-                   setCookie(fd.get('email'));
-                   window.location.href = "https://ohioh-app.de/index.html";
-                   }) 
+    .then(data =>  {
+                   console.log(data);
+setCookie(fd.get('email'));
+                   window.location.href = "https://serene-panini-dac406.netlify.app/index.html";
+
+                   })
     .catch((err) => {
         console.error(err);
     })
