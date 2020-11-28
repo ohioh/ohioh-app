@@ -42,6 +42,8 @@
             var count = Object.keys(data).length;
   console.log(count);
   console.log(data);
+            document.getElementById("contact").innerHTML =count;
+           
   });
 
         
@@ -241,7 +243,7 @@
                             <div class="col-4">
                                 App-Downloads:
                             </div>
-                            <div class="col-4">732</div>
+                            <div class="col-4" id = 'download'>732</div>
                             <div class="col-4">
                                 <button class="btn btn-primary" type="button" data-toggle="collapse"
                                     data-target="#collapseAppDownloads" aria-expanded="false"
@@ -261,7 +263,7 @@
                                 Tracing-Kontakte
                             </div>
                             <div class="col-4">
-                                <p>23412</p>
+                                <p id='contact' >23412</p>
                             </div>
                             <div class="col-4">
                                 <button class="btn btn-primary" type="button" data-toggle="collapse"
@@ -277,7 +279,7 @@
                                 Datenspende
                             </div>
                             <div class="col-4">
-                                <p>212</p>
+                                <p id='donate'>212</p>
                             </div>
                             <div class="col-4">
                                 <button class="btn btn-primary" type="button" data-toggle="collapse"
