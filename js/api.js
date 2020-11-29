@@ -30,7 +30,6 @@ function checkCookiesetting(cname) {
   }
 }
 
-
 // Add a global error event listener early on in the page load, to help ensure that browsers
 // which don't support specific functionality still end up displaying a meaningful message.
 
@@ -264,15 +263,15 @@ function getCookie(cname) {
   return "";
 }
 function checkCookie() {
-if (checkCookiesetting('gps')) {
-    gpsenable = getCookiesetting('gps')
-}
-if (checkCookiesetting('private')) {
-    gpsenable = getCookiesetting('private')
-}
-if (checkCookiesetting('personal')) {
-    gpsenable = getCookiesetting('personal')
-}
+  if (checkCookiesetting("gps")) {
+    gpsenable = getCookiesetting("gps");
+  }
+  if (checkCookiesetting("private")) {
+    gpsenable = getCookiesetting("private");
+  }
+  if (checkCookiesetting("personal")) {
+    gpsenable = getCookiesetting("personal");
+  }
   var user = getCookie("email");
   console.log("cookie:  " + user);
   if (user != "") {
