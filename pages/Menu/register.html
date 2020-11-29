@@ -65,108 +65,113 @@
         </footer>
 
         <!-- Main Page Content Area-->
-        <section>
-            <div class="page-content">
-                <header>
-                    <div class="page-title page-title-large">
-                        <h1 data-username="@OHIOH-App" class="greeting-text">@OHIOH App</h1>
-                        <a href="#" data-menu="menu-main" class="bg-fade-gray1-dark shadow-xl preload-img"
-                            data-src="/icons/Icon-48.png"></a>
-                    </div>
-                </header>
+
+        <div class="page-content">
+            <header>
+                <div class="page-title page-title-large">
+                    <h1 data-username="@OHIOH-App" class="greeting-text">@OHIOH App</h1>
+                    <a href="#" data-menu="menu-main" class="bg-fade-gray1-dark shadow-xl preload-img"
+                        data-src="/icons/Icon-48.png"></a>
+                </div>
+            </header>
 
 
-                <!-- <div class="card header-card shape-rounded" data-card-height="150">
+            <!-- <div class="card header-card shape-rounded" data-card-height="150">
                 <div class="card-overlay bg-highlight opacity-95"></div>
                 <div class="card-overlay dark-mode-tint"></div>
                 <div class="card-bg preload-img" data-src=""></div>
             </div> -->
-                <script>
-                   
-                </script>
+            <script>
 
-                <div class="card card-style">
-                    <div class="content mb-0 mt-1">
+            </script>
 
+            <div class="card card-style">
+                <div class="content mb-0 mt-1">
+
+                    <div class="card">
                         <form id="myForm" name="myForm" method="POST">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="email">Bitte Email eingeben</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" id="email" name="email" value="example@gmail.com">
+                                </div>
+                            </div>
 
-                            <div>
-                                <input type="text" id="email" name="email" value="example@gmail.com">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="email">Bitte Passwort eingeben</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="password" id="password" name="password" value="123">
+                                </div>
                             </div>
-                            <div>
-                                <input type="password" id="password" name="password" value="123">
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="email">Bitte Namen eingeben</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="name" name="name" value="name">
+                                </div>
                             </div>
-                            <div>
-                                <input type="text" id="name" name="name" value="name">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="email">Bitte Kontaktnummer eingeben</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="infecteddate" name="infecteddate" value="phone">
+                                </div>
                             </div>
-                            <div>
-                                <input type="text" id="infecteddate" name="infecteddate" value="phone">
-                            </div>
-                          
-                            
-                            
-                             <div id="installButtonDiv"
                            >
-                             <input class="btn btn-m btn-full rounded-sm shadow-l bg-green1-dark text-uppercase font-900" type="button" value="Submit!" onclick="submitInfo()">
-                        </div>
+                            <div class="divider"></div>
+                            <input id="installButtonDiv"
+                                class="btn btn-m btn-full rounded-sm shadow-l bg-green1-dark text-uppercase font-900"
+                                type="button" value="Submit!" onclick="submitInfo()">
                         </form>
-
-
-                        <div class="divider"></div>
-
-                       
-
-                        <div class="divider"></div>
-
-                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse0"
-                            aria-expanded="false" aria-controls="collapse0">
-                            OHIOH-BLE AddOn runterladen
-                            <a href="https://github.com/ohioh/OHIOH-Bluetooth-AddOn/blob/master/APK/ohiho.apk"
-                                download="APK-File">
-                            </a>
-                        </button>
-
-                        <div class="divider"></div>
-
-                        <p class="text-center">
-                            <a href="index.html" class="color-highlight opacity-80 font-12">Already Registered? Sign in
-                                Here</a>
-                        </p>
-
                     </div>
                 </div>
-
-
-                <!-- footer and footer card-->
-                <div class="footer" data-menu-load="menu-footer.html"></div>
+                <div class="divider"></div>
             </div>
-            <!-- end of page content-->
-
-
-            <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m"
-                data-menu-load="menu-share.html" data-menu-height="420" data-menu-effect="menu-over">
+            <div class="card card-style mt-4 shadow-l" data-card-height="50">
+                <a class="btn btn-primary" type="button"
+                    href="https://github.com/ohioh/OHIOH-Bluetooth-AddOn/raw/master/APK/ohiho.apk" download=> Download
+                    Bluetooth Addon
+                </a>
             </div>
 
-            <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached rounded-m"
-                data-menu-load="menu-colors.html" data-menu-height="510" data-menu-effect="menu-over">
-            </div>
 
-            <div id="menu-main" class="menu menu-box-right menu-box-detached rounded-m" data-menu-width="260"
-                data-menu-load="menu-main.html" data-menu-active="nav-pages" data-menu-effect="menu-over">
-            </div>
-    </div>
+            <!-- footer and footer card-->
+            <div class="footer" data-menu-load="menu-footer.html"></div>
+        </div>
+        <!-- end of page content-->
 
-    
-    <script rel="script" type="text/javascript" src="../../bootstrap/js/jquery-3.5.1.min.js"></script>
-    <script rel="script" type="text/javascript" src="../../bootstrap/js/popper.min.js"></script>
-    <script rel="script" type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
-    <script rel="script" type="text/javascript" src="../../bootstrap/js/bootstrap4-toggle.min.js"></script>
-        <script type="text/javascript" src="../../js/registration.js"></script> 
-    <script type="text/javascript" src="../../js/jquery.js"></script>
-    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/custom.js"></script>
-    <script type="text/javascript" src="../../js/charts.js"></script>
-    <script type="text/javascript" src="../../index.js"></script>
+
+        <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-share.html"
+            data-menu-height="420" data-menu-effect="menu-over">
+        </div>
+
+        <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached rounded-m"
+            data-menu-load="menu-colors.html" data-menu-height="510" data-menu-effect="menu-over">
+        </div>
+
+        <div id="menu-main" class="menu menu-box-right menu-box-detached rounded-m" data-menu-width="260"
+            data-menu-load="menu-main.html" data-menu-active="nav-pages" data-menu-effect="menu-over">
+        </div>
+
+
+
+        <script rel="script" type="text/javascript" src="../../bootstrap/js/jquery-3.5.1.min.js"></script>
+        <script rel="script" type="text/javascript" src="../../bootstrap/js/popper.min.js"></script>
+        <script rel="script" type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
+        <script rel="script" type="text/javascript" src="../../bootstrap/js/bootstrap4-toggle.min.js"></script>
+        <script type="text/javascript" src="../../js/registration.js"></script>
+        <script type="text/javascript" src="../../js/jquery.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/custom.js"></script>
+        <script type="text/javascript" src="../../js/charts.js"></script>
+        <script type="text/javascript" src="../../index.js"></script>
 </body>
 
 </html>
