@@ -297,57 +297,68 @@
                   </select>
                 </div>
               </div>
-
-              <div class="row mx-autos">
-                <div class="col">
-                  <input type="checkbox" checked data-toggle="toggle" data-on="aktiv" data-off="deaktiviert"
-                    data-onstyle="success" data-offstyle="danger" id="ResearchSafe" />
-                  <label class="mx-autos" for="customControlAutosizing">Eingaben speichern
-                  </label>
-                </div>
-                <div class="col">
-                  <button type="submit" class="btn btn-primary">
-                    Speichern
-                  </button>
-                </div>
+              <div class="col divider-margins">
+                <label class="" for="Interval">Scanabstand</label>
+                <select class="" id="Interval">
+                  <option selected>permanent</option>
+                  <option value="1">permanent</option>
+                  <option value="2">30 Sekunden</option>
+                  <option value="3">60 Sekunden</option>
+                  <option value="4">2 Minuten</option>
+                </select>
               </div>
-
-              <div class="row mx-autos align-items-center">
-                <div class="col-6">
-                  <form>
-                    <button class="btn btn-outline-success">Scan</button>
-                  </form>
-                </div>
-                <div class="col-6">
-                  <button onclick="clearlog()" type="button" class="btn btn-outline-danger">
-                    Löschen
-                  </button>
-                </div>
-              </div>
-
-              <div class="row mx-auto">
-                <div class="col">
-                  <button type="button" class="btn btn-secondary btn-lg btn-block">
-                    Senden
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </article>
-
-        <article>
-          <div class="card card-style mt-4 shadow-l" data-card-height="340">
-            <p>Logger</p>
-            <div id="output" class="output">
-              <div id="content"></div>
-              <div id="status"></div>
-              <pre id="log"></pre>
             </div>
+
+            <div class="row mx-autos">
+              <div class="col">
+                <input type="checkbox" checked data-toggle="toggle" data-on="aktiv" data-off="deaktiviert"
+                  data-onstyle="success" data-offstyle="danger" id="ResearchSafe" />
+                <label class="mx-autos" for="customControlAutosizing">Eingaben speichern
+                </label>
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary">
+                  Speichern
+                </button>
+              </div>
+            </div>
+
+            <div class="row mx-autos align-items-center">
+              <div class="col-6">
+                <form>
+                  <button class="btn btn-outline-success">Scan</button>
+                </form>
+              </div>
+              <div class="col-6">
+                <button onclick="clearlog()" type="button" class="btn btn-outline-danger">
+                  Löschen
+                </button>
+              </div>
+            </div>
+
+            <div class="row mx-auto">
+              <div class="col">
+                <button type="button" class="btn btn-secondary btn-lg btn-block">
+                  Senden
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </article>
+
+      <article>
+        <div class="card card-style mt-4 shadow-l" data-card-height="340">
+          <p>Logger</p>
+          <div id="output" class="output">
+            <div id="content"></div>
+            <div id="status"></div>
+            <pre id="log"></pre>
           </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </article>
+  </div>
+  </section>
   </div>
   <footer>
     <!-- footer and footer card-->

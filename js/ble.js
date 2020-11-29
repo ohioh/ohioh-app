@@ -240,6 +240,7 @@ async function onButtonClick() {
                   devicename: event.device.name,
                   txpower: event.txPower + " ",
                 });
+
                 console.log(VALUE);
 
                 const myHeaders = new Headers();
