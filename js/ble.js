@@ -219,17 +219,17 @@ async function onButtonClick() {
     navigator.bluetooth.addEventListener(
       "advertisementreceived",
       (event) => {
-        if (event.device.name != null && flag == 1) {
+        if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' '   ) {
           // log('Advertisement received.');
           function checkAdult(device) {
             //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
-            return device + " " == event.uuids + " ";
+            return device + " " == event.device.name + " ";
           }
           if (devices.find(checkAdult)) {
             //log("hhhhhhhhhhhhh");
           } else {
             //log("xxxxxxx");
-            devices.push(event.uuids);
+            devices.push(event.device.name);
             if (1) {
 
               if (personalenable == 1) {
