@@ -1,13 +1,4 @@
-  function stringFromArray(data)
-  {
-    var count = data.length;
-    var str = "";
-    
-    for(var index = 0; index < count; index += 1)
-      str += String.fromCharCode(data[index]);
-    
-    return str;
-  }
+  
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
