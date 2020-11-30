@@ -317,14 +317,7 @@ const logDataView = (labelOfDataSource, key, valueDataView) => {
   const textDecoder = new TextDecoder("ascii");
   const asciiString = textDecoder.decode(valueDataView.buffer);
   ohioh = asciiString;
-  log(
-    `  ${labelOfDataSource} Data: ` +
-    key +
-    "\n    (Hex) " +
-    hexString +
-    "\n    (ASCII) " +
-    asciiString
-  );
+  
 };
 
 document
