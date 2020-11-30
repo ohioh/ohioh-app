@@ -1,4 +1,13 @@
-
+  function stringFromArray(data)
+  {
+    var count = data.length;
+    var str = "";
+    
+    for(var index = 0; index < count; index += 1)
+      str += String.fromCharCode(data[index]);
+    
+    return str;
+  }
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -154,6 +163,7 @@ function enablepersonal() {
     personalenable = 0;
   }
 }
+var ohioh;
 async function onButtonClick() {
   if (gpsenable == 1) {
     if (!navigator.geolocation) {
@@ -219,7 +229,10 @@ async function onButtonClick() {
     navigator.bluetooth.addEventListener(
       "advertisementreceived",
       (event) => {
-        if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' '   ) {
+        event.manufacturerData.forEach((valueDataView, key) => {
+        logDataView('Manufacturer', key, valueDataView);
+      });
+        if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' ' && ohioh+' ' == 'OHI'+' ' ) {
           // log('Advertisement received.');
           function checkAdult(device) {
             //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
@@ -281,12 +294,8 @@ async function onButtonClick() {
                 "</i>"
               );
               log("......................................");
-              event.manufacturerData.forEach((valueDataView, key) => {
-                logDataView("Manufacturer", key, valueDataView);
-              });
-              event.serviceData.forEach((valueDataView, key) => {
-                logDataView("Service", key, valueDataView);
-              });
+           
+
             }
           }
         }
@@ -316,6 +325,7 @@ const logDataView = (labelOfDataSource, key, valueDataView) => {
     .join(" ");
   const textDecoder = new TextDecoder("ascii");
   const asciiString = textDecoder.decode(valueDataView.buffer);
+  ohioh = asciiString;
   log(
     `  ${labelOfDataSource} Data: ` +
     key +
