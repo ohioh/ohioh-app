@@ -226,6 +226,22 @@ async function onButtonClick() {
         logDataView('Manufacturer', key, valueDataView);
       });
         if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' ' && ohioh+' ' == 'OHI'+' ' ) {
+       var checkBox = document.getElementById("GPS");
+  console.log("GPS..." + gpsenable);
+  if (checkBox.checked == true) {
+    gpsenable = 1;
+  } else {
+    gpsenable = 0;
+  }
+  console.log('gps:  '+gpsenable);
+   var checkBox = document.getElementById("personalData");
+
+  if (checkBox.checked == true) {
+    personalenable = 1;
+  } else {
+    personalenable = 0;
+  }
+    console.log('personal data '+personalenable);
           // log('Advertisement received.');
           function checkAdult(device) {
             //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
