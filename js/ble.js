@@ -226,7 +226,18 @@ async function onButtonClick() {
         logDataView('Manufacturer', key, valueDataView);
       });
         if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' ' && ohioh+' ' == 'OHI'+' ' ) {
-       var checkBox = document.getElementById("GPS");
+   
+          // log('Advertisement received.');
+          function checkAdult(device) {
+            //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
+            return device + " " == event.device.name + " ";
+          }
+          if (devices.find(checkAdult)) {
+            //log("hhhhhhhhhhhhh");
+          } else {
+            //log("xxxxxxx");
+            devices.push(event.device.name);
+                var checkBox = document.getElementById("GPS");
   console.log("GPS..." + gpsenable);
   if (checkBox.checked == true) {
     gpsenable = 1;
@@ -242,16 +253,6 @@ async function onButtonClick() {
     personalenable = 0;
   }
     console.log('personal data '+personalenable);
-          // log('Advertisement received.');
-          function checkAdult(device) {
-            //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
-            return device + " " == event.device.name + " ";
-          }
-          if (devices.find(checkAdult)) {
-            //log("hhhhhhhhhhhhh");
-          } else {
-            //log("xxxxxxx");
-            devices.push(event.device.name);
             if (1) {
 
               if (personalenable == 1) {
