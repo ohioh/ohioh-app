@@ -143,6 +143,7 @@ function enableintrval() {
   } else {
     intervalenable = 0;
   }
+  console.log(intervalenable);
 }
 
 function enablepersonal() {
@@ -153,6 +154,7 @@ function enablepersonal() {
   } else {
     personalenable = 0;
   }
+    console.log(personalenable);
 }
 var ohioh;
 async function onButtonClick() {
