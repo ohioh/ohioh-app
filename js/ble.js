@@ -1,4 +1,5 @@
-  
+  /*With this function we will get user info which is saved in cookie
+  the parameter of this function is cookie name which will return the cookie value*/
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -15,6 +16,10 @@ function getCookie(cname) {
   return "";
 }
 
+/*This function is for send button , after presing send button this function will send 
+the scanned data to server. 
+
+*/
 function datasend() {
   console.log(VALUE);
 
@@ -99,8 +104,14 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
+/*
+This is class function. with this class we can print our log into the log class.
+There are four function in Chromesample class. Every funtion has it own functionality
+*/
 var ChromeSamples = {
+
+//for live output
+
   log: function () {
     var line = Array.prototype.slice
       .call(arguments)
@@ -113,15 +124,15 @@ var ChromeSamples = {
 
     document.querySelector("#log").innerHTML += line + "\n";
   },
-
+//For clearing the log
   clearLog: function () {
     document.querySelector("#log").textContent = "";
   },
-
+//For setting the statun in status html class
   setStatus: function (status) {
     document.querySelector("#status").textContent = status;
   },
-
+//For setting the content in contetn html class
   setContent: function (newContent) {
     var content = document.querySelector("#content");
     while (content.hasChildNodes()) {
@@ -142,13 +153,16 @@ if (/Chrome\/(\d+\.\d+.\d+.\d+)/.test(navigator.userAgent)) {
     );
   }
 }
+// Her we declare the checkbox value variable 
 var gpsenable = 0,
   intervalenable = 0,
   personalenable = 0;
+
+  //function for clear log button
 function clearlog() {
   ChromeSamples.clearLog();
 }
-
+//This the function for gps checkbox which will change the gps enable variable according to check satus
 function enablegps() {
   var checkBox = document.getElementById("GPS");
   console.log("GPS..." + gpsenable);
@@ -159,7 +173,7 @@ function enablegps() {
   }
   console.log(gpsenable);
 }
-
+//This the function for interval checkbox which will change the intervalenable variable according to check satus
 function enableintrval() {
   var checkBox = document.getElementById("Interval");
 
@@ -170,7 +184,7 @@ function enableintrval() {
   }
   console.log(intervalenable);
 }
-
+//This the function for sending personal data checkbox which will change the gps enable variable according to check satus
 function enablepersonal() {
   var checkBox = document.getElementById("personalData");
 
@@ -183,6 +197,7 @@ function enablepersonal() {
 }
 var ohioh;
 var   VALUE;
+// This is the function for scanning system
 async function onButtonClick() {
   if (gpsenable == 1) {
     if (!navigator.geolocation) {
@@ -211,7 +226,7 @@ async function onButtonClick() {
     status.textContent = "Unable to retrieve your location";
   }
 
-
+// interval flag
 
   var flag = 1;
   if (intervalenable == 1) {
@@ -255,16 +270,18 @@ async function onButtonClick() {
         logDataView('Manufacturer', key, valueDataView);
       });
         if (event.device.name != null && flag == 1 && event.uuids+' ' == '0000280f-0000-1000-8000-6f68696f680a'+' ' && ohioh+' ' == 'OHI'+' ' ) {
-   
-          // log('Advertisement received.');
+          
+          // checking duplicate devices , if there is any device is being 
+          //found then it will check in devices arraay
           function checkAdult(device) {
-            //  log('||' + typeof device+'|'+ typeof event.uuids+"||");
+           
+            
             return device + " " == event.device.name + " ";
           }
           if (devices.find(checkAdult)) {
-            //log("hhhhhhhhhhhhh");
+            
           } else {
-            //log("xxxxxxx");
+            
             devices.push(event.device.name);
                 var checkBox = document.getElementById("GPS");
   console.log("GPS..." + gpsenable);
@@ -281,8 +298,10 @@ async function onButtonClick() {
   } else {
     personalenable = 0;
   }
+  
     console.log('personal data '+personalenable);
             if (1) {
+              //sending json  data throw fetch function 
                 VALUE = JSON.stringify({
                 email: getCookie("email"),
                 uuid: event.uuids + " ",
@@ -294,7 +313,7 @@ async function onButtonClick() {
             
 
                 console.log(VALUE);
-
+//Adding header with headr data
                 const myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
 
@@ -315,7 +334,7 @@ async function onButtonClick() {
                     console.error(err);
                   });
               }
-
+// here is the statement of logging data
 
               log("Device received.");
               log("  Device Name: " + "<i>" + event.device.name + "</i>");
@@ -340,7 +359,8 @@ async function onButtonClick() {
         }
       }
     );
-
+//in this function we have called  a timer , thus we can stop the 
+// scanning function
     setTimeout(stopScan, 10000);
     function stopScan() {
       // log('Stopping scan...');
@@ -355,7 +375,7 @@ async function onButtonClick() {
 }
 
 /* Utils */
-
+//Logdata view is another function of viewing loggs
 const logDataView = (labelOfDataSource, key, valueDataView) => {
   const hexString = [...new Uint8Array(valueDataView.buffer)]
     .map((b) => {
