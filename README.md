@@ -26,7 +26,7 @@ Bluetooth Low Energy is a form of wireless communication designed especially for
 	- [Tools Required](#tools-required)
 	- [Installation](#installation)
 - [Development](#development)
-- [How our OHIOH-APP works](#How our OHIOH-APP works)
+- [How our OHIOH-APP works](#How-our-OHIOH-APP-works)
     - [Step 1: Install OHIOH android app](#Step 1: Install OHIOH android app)
     - [Step 2: Add our web page](#Step 2: Add our web page)
 - [Running the App](#running-the-app)
