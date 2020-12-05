@@ -13,8 +13,9 @@ Open and view the Project using the `.zip` file provided or at my [GitHub Reposi
 The project is also hosted on [GitHub Pages]
 ## PWA
 ![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/pwaimage.png)
+
 A progressive web application is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.
-Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. This set of docs tells you all you need to know about them.
+Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. 
 ## BLE
 ![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/ir_attachment_979.png)
 
@@ -27,8 +28,8 @@ Bluetooth Low Energy is a form of wireless communication designed especially for
 	- [Installation](#installation)
 - [Development](#development)
 - [How our OHIOH-APP works](#How-our-OHIOH-APP-works)
-    - [Step 1: Install OHIOH android app](#Step 1: Install OHIOH android app)
-    - [Step 2: Add our web page](#Step 2: Add our web page)
+    - [Step 1: Install OHIOH android app](#Step-1:-Install-OHIOH-android-app)
+    - [Step 2: Add our web page](#Step-2:-Add-our-web-page)
 - [Running the App](#running-the-app)
 
 - [Contributing](#contributing)
