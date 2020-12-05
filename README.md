@@ -1,6 +1,5 @@
 # OHIHO Covid-19 Tracing App
-![alt text](https://ohioh.de/wp-content/uploads/2020/10/cropped-logo_big.png)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/734e1b8f-794a-4751-a55c-a9c4fa1d0247/deploy-status)](https://app.netlify.com/sites/serene-panini-dac406/deploys)
+![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/OHIOHicons/Icon-256.png)
 ![Current Version](https://img.shields.io/badge/version-v0.1-blue)
 ![GitHub contributors](https://img.shields.io/github/contributors/madhur-taneja/README-Template)
 ![GitHub stars](https://img.shields.io/github/stars/madhur-taneja/README-Template?style=social)
@@ -13,7 +12,7 @@ Open and view the Project using the `.zip` file provided or at my [GitHub Reposi
 
 The project is also hosted on [GitHub Pages]
 ## PWA
-![alt text](https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd5%2FProgressive_Web_Apps_Logo.svg%2F1200px-Progressive_Web_Apps_Logo.svg.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FProgressive_web_application&tbnid=vZKqZJyBPlW0IM&vet=12ahUKEwiKndLR-7btAhX62nMBHUQpCoYQMygAegUIARCmAQ..i&docid=JjWJ2YXBwQXqKM&w=1200&h=452&itg=1&q=pwa&ved=2ahUKEwiKndLR-7btAhX62nMBHUQpCoYQMygAegUIARCmAQ)
+![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/ir_attachment_979.png)
 A progressive web application is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.
 Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. This set of docs tells you all you need to know about them.
 ## BLE
@@ -91,74 +90,77 @@ Our project structure is given below:
 	│   └── manifest.json
 	└── images
 		├── App.css
-		├── App.js
-		├── App.test.js
-		├── index.css
-		├── index.js
-		├── logo.svg
-		└── serviceWorker.js
-		└── setupTests.js
+		└── image files
 ```
 
 ### Tools Required
 
 All tools required go here. You would require the following tools to develop and run the project:
 
-* A text editor or an IDE (like IntelliJ)
-* Mention the other tools required for the project 
+* Smartphone with BLE support
+* A web browser with BLE support
+* Ohioh android ble simulator app
 
 ### Installation
 
 All installation steps go here.
 
-* Installing a particular tool
-  * Steps to complete it
+* Install our ohiho android app from here [OHIOH Android BLE]
   
-* Installing another tool
+* Go to our web app [OHIOH App]
+   *As it is a pwa application you have to you can add this on your home screen
+   *Then go to our homepage press the scan button if you just want search ble devices around you.
+   *If want to contribute on our research , then go to research page and start scanning through scan button
+   *In every choice you have to accept the bluetooth access of this app.
 
 ## Development
 
-This section is completely optional. For big projects, the developement strategies are not discussed. But for small projects, you can give some insight to people. It has 2 benefits in my opinion:
+We have developed this PWA application with ble technology. And also we have developed a android simulator for sending data to our pwa app. Further more develooment information given below:
 
-1. It's a way to give back to the community. People get to learn from you and appreciate your work
-2. You can refer the README in future as a quick refresher before an interview or for an old project to check if it can help you in your currect work
+1. We hav edevelopped PWA application which will work in offline and will give notification of your nearby devices. We hav used browser api for accessing ble technology. Those api will help you to access and control ble service of smartphone.
 
-### Part 1: Heading
+2. We have also developped a android ble simulator [OHIOH Android BLE]. In this application we have used Generic Attribute Profile (GATT) protocol for ble communication. When it will advertise its device's information then it will send the uuid , manufacturer id and so on.
 
-#### Step 1: Subheading
+3. We also developed a qr code scanner and generator in our pwa application . You can scan any QR code with this scanner. And it will return all information regarding QR code. 
 
-* Mention the steps here
-  * You can also have nested steps to break a step into small tasks
+## How our OHIOH-APP works
+
+### Step 1: Install OHIOH android app
+
+* From [OHIOH Android BLE] you can install our android ble app .
+  * Then press the start button , ble will start to advertise hise presence with information. 
   
-#### Step 2: Subheading
+### Step 2: Add our web page
 
-* Mention the steps here.
-  * You can also have nested steps to break a step into small tasks
+* Go to our web page [OHIOH App]. Then you have to enable experimental ble permission. 
+  * In our homepage there is there is scan button if press this button , then ble scan will start by its own. 
+  * if you wan t take part of research then go to research page then press the scan button .
+  * Every page has option of sending ble data. If you enable those option then this app will send your nearby devices information to our server.
 
-For details now how everything has been implemented, refer the source code
 
-### Part 2: Heading
-
-* Mention the steps here
+thats it now you can use our app and can fight ot covid
 
 ## Running the App
 
-Steps and commands for running the app are to be included here
+If you run our application on research page then there will be a output list of nearby ble devices.
 
-* Example steps:
+* Example output:
   ```
-    Example command
+    Device name:
+    Device id:
+    uuid:
+    TX power:
+    RSSI
+  
   ```
 
-## Deployment
 
-This section is completely optional. Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Mention what you expect from the people who want to contribute
+Now we are trying to sending ble data with pwa application instead of android app. But we are still doing research on it. 
 
-We'd love to have your helping hand on `Project Title`! See [CONTRIBUTING.md] for more information on what we're looking for and how to get started.
+We'd love to have your helping hand on this research and other contribution.  See [CONTRIBUTING.md] for more information on what we're looking for and how to get started.
 
 ## Versioning
 
@@ -168,33 +170,37 @@ For the available versions, see the [tags on this repository][tags]
 
 ## Authors
 
-#### Madhur Taneja
+#### Tjark Zeim
 * [GitHub]
 * [LinkedIn]
-
+#### Alam Al Saud
+* [GitHub]
+* [LinkedIn]
 You can also see the complete [list of contributors][contributors] who participated in this project.
 
-## License
 
-`Project Title` is open source software [licensed as MIT][license].
 
 ## Acknowledgments
 
 This section can also be called as `Resources` or `References`
 
-* Code Honor if someone's work was referred to
-* Tutorials followed
-* Articles that helped
+
+* Helpfull articles and documentation you can read
+   ** https://developer.android.com/guide/topics/connectivity/bluetooth-le
+   ** https://googlechrome.github.io/samples/web-bluetooth/
+   ** https://web.dev/bluetooth/
+   ** https://developer.chrome.com/apps/bluetoothLowEnergy
 * Inspiration
-* etc
+
 
 [//]: # (HyperLinks)
 
 [GitHub Repository]: https://github.com/ohioh/ohioh-app
+[OHIOH Android BLE]: https://github.com/ohioh/OHIOH-Bluetooth-AddOn/raw/master/APK/ohioh.apk
 [GitHub Pages]: https://github.com/ohioh/ohioh-app/blob/master/README.md
 [CONTRIBUTING.md]: https://github.com/ohioh/ohioh-app/blob/master/CONTRIBUTING.md
 [tags]: https://github.com/ohioh/ohioh-app/blob/master/tags
-
+[OHIOH App]: https://ohioh-app.netlify.app/
 [GitHub]: https://github.com/ohioh/ohioh-app
 [LinkedIn]: https://www.linkedin.com/in/madhur-taneja/
 
