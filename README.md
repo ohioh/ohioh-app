@@ -12,11 +12,11 @@ Open and view the Project using the `.zip` file provided or at my [GitHub Reposi
 
 The project is also hosted on [GitHub Pages]
 ## PWA
-![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/ir_attachment_979.png)
+![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/pwaimage.png)
 A progressive web application is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices.
 Progressive Web Apps are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. This set of docs tells you all you need to know about them.
 ## BLE
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Flocatify.com%2Fblog%2Fbeacon-faq%2F&psig=AOvVaw2v0G5HlhL0HwJKNFMpzHbc&ust=1607262563886000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKC41fL9tu0CFQAAAAAdAAAAABAD)
+![alt text](https://github.com/ohioh/ohioh-app/blob/master/images/ir_attachment_979.png)
 BLE stands for Bluetooth Low Energy (Bluetooth LE, and marketed as Bluetooth Smart).
 
 Bluetooth Low Energy is a form of wireless communication designed especially for short-range communication.  BLE is very similar to Wi-Fi in the sense that it allows devices to communicate with each other. However, BLE is meant for situations where battery life is preferred over high data transfer speeds. For example, say you want to broadcast marketing campaigns in the close proximity of a newly launched headphone. The amount of data you need to transfer to a visitor’s smartphone is extremely small, hence Bluetooth LE compatible beacons do the job quickly without draining the battery. 
@@ -26,12 +26,11 @@ Bluetooth Low Energy is a form of wireless communication designed especially for
 	- [Tools Required](#tools-required)
 	- [Installation](#installation)
 - [Development](#development)
-    - [Part 1: Heading](#part-1-heading)
-	  - [Step 1: Subheading](#step-1-subheading)
-	  - [Step 2: Subheading](#step-2-subheading)
-	- [Part 2: Heading](#part-2-heading)
+- [How our OHIOH-APP works](#How our OHIOH-APP works)
+    - [Step 1: Install OHIOH android app](#Step 1: Install OHIOH android app)
+    - [Step 2: Add our web page](#Step 2: Add our web page)
 - [Running the App](#running-the-app)
-- [Deployment](#deployment)
+
 - [Contributing](#contributing)
 - [Versioning](#versioning)
 - [Authors](#authors)
@@ -93,7 +92,7 @@ Our project structure is given below:
 		└── image files
 ```
 
-### Tools Required
+## Tools Required
 
 All tools required go here. You would require the following tools to develop and run the project:
 
@@ -101,7 +100,7 @@ All tools required go here. You would require the following tools to develop and
 * A web browser with BLE support
 * Ohioh android ble simulator app
 
-### Installation
+## Installation
 
 All installation steps go here.
 
